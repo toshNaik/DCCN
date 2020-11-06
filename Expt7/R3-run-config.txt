@@ -1,0 +1,99 @@
+Building configuration...
+
+Current configuration : 1011 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R3
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 172.30.110.1 255.255.255.0
+!
+interface Loopback1
+ ip address 172.30.200.17 255.255.255.240
+!
+interface Loopback2
+ ip address 172.30.200.33 255.255.255.240
+!
+interface FastEthernet0/0
+ ip address 172.30.100.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Serial0/0/1
+ ip address 209.165.200.234 255.255.255.252
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ version 2
+ passive-interface FastEthernet0/0
+ network 172.30.0.0
+ network 209.165.200.0
+ no auto-summary
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end

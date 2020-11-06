@@ -1,0 +1,23 @@
+Routing Protocol is "rip"
+Sending updates every 30 seconds, next due in 25 seconds
+Invalid after 180 seconds, hold down 180, flushed after 240
+Outgoing update filter list for all interfaces is not set
+Incoming update filter list for all interfaces is not set
+Redistributing: rip
+Default version control: send version 2, receive 2
+  Interface             Send  Recv  Triggered RIP  Key-chain
+  Loopback0             2     2     
+  Loopback1             2     2     
+  Loopback2             2     2     
+  Serial0/0/1           2     2     
+Automatic network summarization is not in effect
+Maximum path: 4
+Routing for Networks:
+	172.30.0.0
+	209.165.200.0
+Passive Interface(s):
+	FastEthernet0/0
+Routing Information Sources:
+	Gateway         Distance      Last Update
+	209.165.200.233      120      00:00:09
+Distance: (default is 120)

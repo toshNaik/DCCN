@@ -1,0 +1,9 @@
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/0        172.30.100.1    YES manual up                    up 
+FastEthernet0/1        unassigned      YES NVRAM  administratively down down 
+Serial0/0/0            unassigned      YES NVRAM  administratively down down 
+Serial0/0/1            209.165.200.234 YES manual up                    up 
+Loopback0              172.30.110.1    YES manual up                    up 
+Loopback1              172.30.200.17   YES manual up                    up 
+Loopback2              172.30.200.33   YES manual up                    up 
+Vlan1                  unassigned      YES NVRAM  administratively down down

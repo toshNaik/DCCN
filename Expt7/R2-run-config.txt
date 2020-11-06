@@ -1,0 +1,89 @@
+Building configuration...
+
+Current configuration : 831 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R2
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 10.1.0.1 255.255.0.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ ip address 209.165.200.229 255.255.255.252
+!
+interface Serial0/0/1
+ ip address 209.165.200.233 255.255.255.252
+ clock rate 64000
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ version 2
+ passive-interface FastEthernet0/0
+ network 10.0.0.0
+ network 209.165.200.0
+ no auto-summary
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
